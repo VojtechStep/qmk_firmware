@@ -18,7 +18,7 @@ enum layers {
 };
 
 enum custom_keycodes {
-    KR_NUM_2 = EZ_SAFE_RANGE,
+    KR_NUM_2 = SAFE_RANGE,
     KR_NUM_3,
     KR_NUM_4,
     KR_NUM_5,
@@ -186,7 +186,7 @@ MAKE_KRITA_NUM(8, KC_NO);
 MAKE_KRITA_NUM(9, KC_NO);
 MAKE_KRITA_NUM(0, KC_NO);
 
-const key_override_t **key_overrides = (const key_override_t *[]){&key_binop, &key_at_grave, KRITA_NUM(1) KRITA_NUM(2) KRITA_NUM(3) KRITA_NUM(4) KRITA_NUM(5) KRITA_NUM(6) KRITA_NUM(7) KRITA_NUM(8) KRITA_NUM(9) KRITA_NUM(0) NULL};
+const key_override_t *key_overrides[] = {&key_binop, &key_at_grave, KRITA_NUM(1), KRITA_NUM(2), KRITA_NUM(3), KRITA_NUM(4), KRITA_NUM(5), KRITA_NUM(6), KRITA_NUM(7), KRITA_NUM(8), KRITA_NUM(9), KRITA_NUM(0)};
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     uint8_t layer = get_highest_layer(state);
