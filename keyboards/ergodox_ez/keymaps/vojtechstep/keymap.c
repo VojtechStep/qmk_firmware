@@ -61,6 +61,8 @@ enum unicode_names {
     C_CARET_UP,
     N_CARET,
     N_CARET_UP,
+    EM_DASH,
+    EM_DASH_UP,
 };
 
 //[LAYER] = LAYOUT_ergodox_pretty(
@@ -123,7 +125,7 @@ const uint16_t PROGMEM keymaps[NUM_LAYERS][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+                                                                                    KC_TRANSPARENT, UNI_L(EM_DASH), KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [_KL] = LAYOUT_ergodox_pretty(
     KR_DSELCT,      KR_NUM_1,       KR_NUM_2,       KR_NUM_3,       KR_NUM_4,       KR_NUM_5,       TG(_KL),                                        KC_NO,          KR_NUM_6,       KR_NUM_7,       KR_NUM_8,       KR_NUM_9,       KR_NUM_0,       KC_NO,
@@ -261,5 +263,7 @@ const uint32_t PROGMEM unicode_map[] = {
     [C_CARET_UP] = 0x10c,
     [N_CARET] = 0x148,
     [N_CARET_UP] = 0x147,
+    [EM_DASH] = 0x2014,
+    [EM_DASH_UP] = 0x2013
 };
 // clang-format on
